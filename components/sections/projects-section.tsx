@@ -12,6 +12,16 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/u
 const projects = [
   {
     id: 1,
+    title: 'Cryptocurrency Analytics',
+    description: 'A real-time Bitcoin insights dashboard, featuring current price, historical trends, 24-hour metrics, market cap volume, sentiment analysis, and quick stats on circulating supply.',
+    image: 'https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=800',
+    tags: ['Reactjs', 'javascript', 'API', 'Html', 'Css'],
+    demo: 'https://cryptoanalytic.netlify.app/',
+    github: 'https://github.com/tejaswaroop999/Cryptocurrency-Analytics-Dashboard',
+    featured: true,
+  },
+  {
+    id: 2,
     title: 'AI-Powered E-commerce Platform',
     description: 'A modern e-commerce platform with AI-driven product recommendations, dynamic pricing, and intelligent inventory management.',
     image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800',
@@ -19,16 +29,7 @@ const projects = [
     demo: '#',
     github: '#',
     featured: true,
-  },
-  {
-    id: 2,
-    title: 'Real-time Collaboration Tool',
-    description: 'A Slack-inspired collaboration platform with real-time messaging, file sharing, and video conferencing capabilities.',
-    image: 'https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&cs=tinysrgb&w=800',
-    tags: ['React', 'Socket.io', 'Node.js', 'MongoDB', 'WebRTC'],
-    demo: '#',
-    github: '#',
-    featured: true,
+
   },
   {
     id: 3,
@@ -42,13 +43,13 @@ const projects = [
   },
   {
     id: 4,
-    title: 'Cryptocurrency Analytics',
-    description: 'A real-time Bitcoin insights dashboard, featuring current price, historical trends, 24-hour metrics, market cap volume, sentiment analysis, and quick stats on circulating supply.',
-    image: 'https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=800',
-    tags: ['Reactjs', 'javascript', 'API', 'Html', 'Css'],
+    title: 'Real-time Collaboration Tool',
+    description: 'A Slack-inspired collaboration platform with real-time messaging, file sharing, and video conferencing capabilities.',
+    image: 'https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&cs=tinysrgb&w=800',
+    tags: ['React', 'Socket.io', 'Node.js', 'MongoDB', 'WebRTC'],
     demo: '#',
-    github: 'https://github.com/tejaswaroop999/Cryptocurrency-Analytics-Dashboard',
-    featured: false,
+    github: '#',
+    featured: true,
   },
   {
     id: 5,
@@ -116,14 +117,18 @@ export default function ProjectsSection() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="flex space-x-2">
+                    <a href={project.demo} target="_blank" rel="noopener noreferrer">
                       <Button size="sm" variant="secondary">
                         <ExternalLink className="h-4 w-4 mr-1" />
                         Demo
                       </Button>
+                    </a>
+                    <a href={project.github} target="_blank" rel="noopener noreferrer">
                       <Button size="sm" variant="outline">
                         <Github className="h-4 w-4 mr-1" />
                         Code
                       </Button>
+                    </a>
                     </div>
                   </div>
                 </div>
@@ -184,14 +189,18 @@ export default function ProjectsSection() {
                   ))}
                 </div>
                 <div className="flex space-x-4">
+                  <a href={selectedProject.demo} target="_blank" rel="noopener noreferrer">
                   <Button>
                     <ExternalLink className="h-4 w-4 mr-2" />
                     Live Demo
                   </Button>
+                  </a>
+                  <a href={selectedProject.github} target="_blank" rel="noopener noreferrer">
                   <Button variant="outline">
                     <Github className="h-4 w-4 mr-2" />
                     View Code
                   </Button>
+                  </a>
                 </div>
               </div>
             )}
