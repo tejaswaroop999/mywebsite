@@ -89,7 +89,7 @@ export default function HeroSection() {
             View My Work
           </Button>
           </a>
-          <a href="doc\Teja_full_stack.pdf" download>
+          <a href="doc/tejaswaroop.pdf" download>
           <Button variant="outline" size="lg" >
             Download Resume
           </Button>
